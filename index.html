@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meteor trajectory - view from my location</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; padding: 1rem; max-width: 40rem; margin-inline: auto; line-height: 1.4; }
+  h1 { font-size: 1.3rem; }
+  button, a.btn { display: block; width: 100%; box-sizing: border-box; margin: .6rem 0; padding: .9rem; font-size: 1.05rem;
+                  border: 0; border-radius: .5rem; background: #1a73e8; color: #fff; text-align: center; text-decoration: none; }
+  button.secondary, a.btn.secondary { background: #e8eaed; color: #202124; }
+  button:disabled { opacity: .5; }
+  .box { background: #f1f3f4; border-radius: .5rem; padding: .7rem .9rem; margin: .8rem 0; }
+  table { border-collapse: collapse; width: 100%; }
+  td, th { padding: .25rem .4rem; text-align: right; border-bottom: 1px solid #ddd; }
+  td:first-child, th:first-child { text-align: left; }
+  details { margin: .8rem 0; }
+  input { font-size: 1rem; padding: .5rem; width: 100%; box-sizing: border-box; margin: .2rem 0 .6rem; }
+  .small { font-size: .85rem; color: #555; }
+  .err { color: #b00020; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<h1>Meteor trajectory: view from my location</h1>
+
+<div id="event" class="box">Loading the latest trajectory file&hellip;</div>
+
+<button id="go" disabled>Use my location</button>
+
+<details>
+  <summary>Or enter a location by hand</summary>
+  <label>Latitude (decimal degrees, e.g. 51.75 or 51.75N)<input id="lat" inputmode="decimal"></label>
+  <label>Longitude (e.g. -1.25 or 1.25W)<input id="lon" inputmode="decimal"></label>
+  <label>Height above sea level in metres (blank = look it up)<input id="alt" inputmode="decimal"></label>
+  <button id="manual" class="secondary" disabled>Calculate</button>
+</details>
+
+<div id="status" class="small"></div>
+<div id="result" class="hidden">
+  <div id="summary" class="box"></div>
+  <button id="share">Open in Google Earth / share KML</button>
+  <a id="dl" class="btn secondary">Download combined KML</a>
+  <a id="dlpts" class="btn secondary hidden">Download sight-line points KML (extra)</a>
+  <p class="small">If the share button does not offer Google Earth, download the file, then open it from your Downloads
+  (tap it &rarr; Open with Google Earth), or use Import in the Google Earth app.</p>
+</div>
+
+<p class="small">Your location stays on your phone: the calculation happens in this page. The only thing sent elsewhere is your
+latitude/longitude to the free Open-Meteo elevation service (if no height is typed in).
+The trajectory is read from the newest KML/KMZ file in the
+<a href="https://github.com/JRRowe/Impactor">JRRowe/Impactor</a> repository.</p>
+
+<script src="app.js"></script>
+</body>
+</html>
