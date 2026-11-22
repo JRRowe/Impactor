@@ -1,0 +1,15 @@
+{
+  "startLat": -13.7078,
+  "startLon": 116.6958,
+  "startHeightKm": 90.0,
+  "endLat": -13.7561,
+  "endLon": 116.4895,
+  "endHeightKm": 20.0,
+  "startInSeconds": 13612,
+  "durationSeconds": 9.9,
+  "object": "CERNQ52",
+  "version": 4,
+  "startTimeUtc": "2026-09-06T16:06:52.303Z",
+  "endTimeUtc": "2026-09-06T16:07:02.223Z",
+  "generatedUtc": "2026-09-06T12:20:00.000Z"
+}
