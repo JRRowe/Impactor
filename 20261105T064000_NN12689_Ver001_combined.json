@@ -1,0 +1,15 @@
+{
+  "startLat": 32.1729,
+  "startLon": 84.5069,
+  "startHeightKm": 90.0,
+  "endLat": 32.1867,
+  "endLon": 83.8199,
+  "endHeightKm": 20.0,
+  "startInSeconds": 0,
+  "durationSeconds": 7.6,
+  "object": "NN12689",
+  "version": 1,
+  "startTimeUtc": "2026-11-04T15:44:54.618Z",
+  "endTimeUtc": "2026-11-04T15:45:02.249Z",
+  "generatedUtc": "2026-11-05T06:41:00.000Z"
+}
